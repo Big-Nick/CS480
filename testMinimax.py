@@ -1,7 +1,8 @@
-## simple file to test minimax
+# simple file to test minimax
 
 from AIPlayer import *
 import connect4
+
 
 def printState(board):
     for i in range(5, -1, -1):
@@ -12,7 +13,9 @@ def printState(board):
     print("\t  _   _   _   _   _   _   _ ")
     print("\t  1   2   3   4   5   6   7 ")
 
-b = [[' ', 'x', 'o', 'x', 'o', ' ', 'x'], [' ', 'x', 'o', 'o', ' ', ' ', ' '], [' ', ' ', 'o', 'o', ' ', ' ', ' '], [' ', ' ', 'x', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ']]
+
+b = [[' ', 'x', 'o', 'x', 'o', ' ', 'x'], [' ', 'x', 'o', 'o', ' ', ' ', ' '], [' ', ' ', 'o', 'o', ' ', ' ', ' '], [
+    ' ', ' ', 'x', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' '], [' ', ' ', ' ', ' ', ' ', ' ', ' ']]
 
 printState(b)
 m = Minimax(b)
@@ -20,4 +23,3 @@ m = Minimax(b)
 print("Finding best move for x...")
 
 print(m.bestMove(5, b, 'x'))
-
